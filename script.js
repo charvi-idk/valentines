@@ -1,16 +1,14 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const noBtn = document.getElementById("noBtn");
-  const yesBtn = document.getElementById("yesBtn");
+const yesBtn = document.getElementById('yesBtn');
+const noBtn = document.getElementById('noBtn');
 
-  let noClickCount = 0;
+let noClickCount = 0;
 
-  yesBtn.addEventListener("click", () => {
-    window.location.href = "celebration.html";
-  });
+yesBtn.addEventListener('click', () => {
+    window.location.href = 'celebration.html';
+});
 
-  noBtn.addEventListener("click", () => {
+noBtn.addEventListener('click', () => {
     noClickCount++;
-    const textIndex = noClickCount % noTexts.length;
-    noBtn.textContent = noTexts[textIndex];
-  });
+    const responseIndex = noClickCount % noResponses.length;
+    noBtn.textContent = noResponses[responseIndex];
 });
